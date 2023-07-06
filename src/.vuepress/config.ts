@@ -1,5 +1,5 @@
-import { defineUserConfig } from "vuepress";
-import theme from "./theme.js";
+import { defineUserConfig } from "vuepress"
+import theme from "./theme.js"
 
 export default defineUserConfig({
   base: "/",
@@ -7,9 +7,17 @@ export default defineUserConfig({
   lang: "zh-CN",
   title: "文档演示",
   description: "vuepress-theme-hope 的文档演示",
-
-  theme,
+  head: [
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://www.unpkg.com/ame-grid@0.0.1/css/grid.css"
+      }
+    ]
+  ],
+  theme
 
   // Enable it with pwa
   // shouldPrefetch: false,
-});
+})
